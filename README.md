@@ -21,12 +21,17 @@ raycast(fileName, blockToHit, entityToHit, runOnEveryStep, runOnHit, step){
     // code
 }
 ```
-`nameOfFile` Name of the file that will be generated 
-`blockToHit` Block name to actively look for, once the block is found the raycast will stop
-`entityToHit` Name of the Entity to look for, it accept Selectors with distance attribute
-`runOnEveryStep` MCFunction to run on every step
-`runOnHit` MCFunction to run on hitting the target
-`step` Step size of the raycast, default is 1 (OPTIONAL)
+`nameOfFile` Name of the file that will be generated.
+
+`blockToHit` Block name to actively look for, once the block is found the raycast will stop.
+
+`entityToHit` Name of the Entity to look for, it accept Selectors with distance attribute.
+
+`runOnEveryStep` MCFunction to run on every step.
+
+`runOnHit` MCFunction to run on hitting the target.
+
+`step` Step size of the raycast, default is 1 (OPTIONAL).
 
 **Example of the function:**
 ```ts
@@ -81,7 +86,7 @@ MCFunction('test', () => {
 })
 ```
 
-<span style="color:red">NOTE: This library does ==NOT== handle scores and right click detection</span>
+<span style="color:red">NOTE: This library does **NOT** handle scores and right click detection</span>
 
 
 
