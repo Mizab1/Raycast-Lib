@@ -8,8 +8,9 @@
       "data\\raycast_lib\\functions\\test\\execute_as.mcfunction": "28730a2fc3462bc5254c139fbc92105d",
       "data\\raycast_lib\\functions\\raycast\\update.mcfunction": "4b0575d4400996b8a722f4e8fe0d43bb",
       "data\\raycast_lib\\functions\\raycast\\hit.mcfunction": "8baec8a95817e0b3f1d25d8f542b490b",
-      "data\\raycast_lib\\functions\\raycast\\cast.mcfunction": "d5fda67819639a239eb5362cbc6b00de",
-      "data\\raycast_lib\\functions\\__init__.mcfunction": "f8b91616d33f5014f297b6789fa6981c"
+      "data\\raycast_lib\\functions\\raycast\\cast.mcfunction": "255d42673cf13f854bfb5eb3851769d8",
+      "data\\raycast_lib\\functions\\raycast\\cast\\else_if.mcfunction": "ae373205f4e76c644b369cd609452dff",
+      "data\\raycast_lib\\functions\\__init__.mcfunction": "baf5d1b73a87184ab279cd84a2936220"
     },
     "resultFolder": "C:\\Users\\Mizab\\AppData\\Roaming\\.minecraft\\saves\\Testing 3\\datapacks\\Raycast Lib"
   }
