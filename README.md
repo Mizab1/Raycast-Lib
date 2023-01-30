@@ -17,7 +17,7 @@ import { raycast } from './RaycastLib'
 ---
 **Syntax:**
 ```ts
-raycast(fileName, blockToIgnore, entityToHit, runOnEveryStep, runOnHit, step){
+raycast(fileName, blockToIgnore, entityToHit, runOnEveryStep, runOnHit, step, maxIter){
     // code
 }
 ```
@@ -32,6 +32,8 @@ raycast(fileName, blockToIgnore, entityToHit, runOnEveryStep, runOnHit, step){
 `runOnHit` MCFunction to run on hitting the target.
 
 `step` Step size of the raycast, default is 1 (OPTIONAL).
+
+`maxIter` Maximum iteration of the raycast, default is 20.
 
 **Example of the function:**
 ```ts
@@ -50,7 +52,7 @@ raycast(
     MCFunction("raycast/hit", () => {
         effect.give(Selector('@e', { type: 'minecraft:husk', dx: 0}), "minecraft:instant_health");
         say("Hi")
-    }), 1
+    }), 1, 50
 )
 ```
 
@@ -80,7 +82,7 @@ MCFunction('test', () => {
             MCFunction("raycast/hit", () => {
                 effect.give(Selector('@e', { type: 'minecraft:husk', dx: 0}), "minecraft:instant_health");
                 say("Hi")
-            }), 1
+            }), 1, 50
         )
 	})
 }, {
