@@ -11,13 +11,13 @@ const currentIter = raycastPvtObj('curr_iter');
  * @param entityToHit Name of the Entity to look for, it accept Selectors with distance attribute.
  * @param runOnEveryStep MCFunction to run on every step.
  * @param runOnHit MCFunction to run on hitting the target.
- * @param maxIter Maximum iteration of the raycast, default is 20.
  * @param step Step size of the raycast, default is 1.
+ * @param maxIter Maximum iteration of the raycast, default is 20.
  * 
  * You can use NOT operator (!) to invert the condition of 'entityToHit'.
  * Note: You can pass `null` where you don't want to pass the args such as `entityToHit`, `blockToHit`.
  */
-export function raycast(nameOfFile: string, blockToIgnore: BLOCKS, entityToHit: SelectorClass, runOnEveryStep: MCFunctionInstance, runOnHit: MCFunctionInstance, maxIter: number = 20, step: number = 1): void {
+export function raycast(nameOfFile: string, blockToIgnore: BLOCKS, entityToHit: SelectorClass, runOnEveryStep: MCFunctionInstance, runOnHit: MCFunctionInstance, step: number = 1,  maxIter: number = 20): void {
     // Reuseable function to check if the target is hit
     function ifHitBlock(): void {
         execute.unless(_.block(rel(0, 0, 0), blockToIgnore)).run(runOnHit);
