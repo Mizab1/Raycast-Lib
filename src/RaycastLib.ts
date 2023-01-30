@@ -2,13 +2,14 @@ import { BLOCKS, execute, functionCmd, loc, MCFunction, MCFunctionInstance, rel,
 
 /**
  * Creates a simple raycast.
- * @param nameOfFile Name of the file that will be generated 
- * @param blockToIgnore Block name ignore, if the current block is not the specified block then the raycast will stop
- * @param entityToHit Name of the Entity to look for, it accept Selectors with distance attribute
- * @param runOnEveryStep MCFunction to run on every step
- * @param runOnHit MCFunction to run on hitting the target
- * @param step Step size of the raycast, default is 1
+ * @param nameOfFile Name of the file that will be generated.
+ * @param blockToIgnore Block name ignore, if the current block is not the specified block then the raycast will stop.
+ * @param entityToHit Name of the Entity to look for, it accept Selectors with distance attribute.
+ * @param runOnEveryStep MCFunction to run on every step.
+ * @param runOnHit MCFunction to run on hitting the target.
+ * @param step Step size of the raycast, default is 1.
  * 
+ * You can use NOT operator (!) to invert the condition of 'entityToHit'.
  * Note: You can pass `null` where you don't want to pass the args such as `entityToHit`, `blockToHit`.
  */
 export function raycast(nameOfFile: string, blockToIgnore: BLOCKS, entityToHit: SelectorClass, runOnEveryStep: MCFunctionInstance, runOnHit: MCFunctionInstance, step: number = 1): void {

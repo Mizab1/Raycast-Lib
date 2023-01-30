@@ -17,13 +17,13 @@ import { raycast } from './RaycastLib'
 ---
 **Syntax:**
 ```ts
-raycast(fileName, blockToHit, entityToHit, runOnEveryStep, runOnHit, step){
+raycast(fileName, blockToIgnore, entityToHit, runOnEveryStep, runOnHit, step){
     // code
 }
 ```
 `nameOfFile` Name of the file that will be generated.
 
-`blockToHit` Block name to actively look for, once the block is found the raycast will stop.
+`blockToIgnore` Block name ignore, if the current block is not the specified block then the raycast will stop.
 
 `entityToHit` Name of the Entity to look for, it accept Selectors with distance attribute.
 
@@ -37,10 +37,10 @@ raycast(fileName, blockToHit, entityToHit, runOnEveryStep, runOnHit, step){
 ```ts
 raycast(
     "raycast/cast",
-    "minecraft:sandstone", 
+    "minecraft:air", 
     Selector('@e', 
         { 
-            type: "minecraft:zombie", 
+            type: "minecraft:husk", 
             dx: 0
         }
     ),
@@ -48,28 +48,29 @@ raycast(
         particle("minecraft:crit", rel(0, 0, 0), [0, 0, 0], 0, 1);
     }), 
     MCFunction("raycast/hit", () => {
-        effect.give(Selector('@e', { type: 'minecraft:zombie', dx: 0}), "minecraft:instant_health");
+        effect.give(Selector('@e', { type: 'minecraft:husk', dx: 0}), "minecraft:instant_health");
+        say("Hi")
     }), 1
 )
 ```
 
 **Example Pack:**
 ```ts
-import { effect, execute, MCFunction, Objective, particle, rel, Selector } from 'sandstone'
+import { effect, execute, loc, MCFunction, Objective, particle, rel, say, Selector } from 'sandstone'
 import { raycast } from './RaycastLib'
 
 export const rightClickObj = Objective.create("cast.rc.obj", "minecraft.used:minecraft.carrot_on_a_stick")
 export const rightClick = rightClickObj("@s")
 
 MCFunction('test', () => {
-    execute.as(Selector('@a', { scores: { 'cast.rc.obj': [1, null] } })).at('@s').anchored("eyes").run(() => {
-	rightClick.set(0);
-	raycast(
+    execute.as(Selector('@a', { scores: { 'cast.rc.obj': [1, null] } })).at('@s').anchored("eyes").positioned(loc(0, 0, 1)).run(() => {
+        rightClick.set(0);
+        raycast(
             "raycast/cast",
-            "minecraft:sandstone", 
+            "minecraft:air", 
             Selector('@e', 
                 { 
-                    type: "minecraft:zombie", 
+                    type: "minecraft:husk", 
                     dx: 0
                 }
             ),
@@ -77,12 +78,13 @@ MCFunction('test', () => {
                 particle("minecraft:crit", rel(0, 0, 0), [0, 0, 0], 0, 1);
             }), 
             MCFunction("raycast/hit", () => {
-                effect.give(Selector('@e', { type: 'minecraft:zombie', dx: 0}), "minecraft:instant_health");
+                effect.give(Selector('@e', { type: 'minecraft:husk', dx: 0}), "minecraft:instant_health");
+                say("Hi")
             }), 1
         )
-    })
+	})
 }, {
-    runEachTick: true
+	runEachTick: true
 })
 ```
 
