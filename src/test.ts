@@ -23,7 +23,7 @@ MCFunction('test', () => {
 		rightClick.set(0);
 		raycast(
 			"raycast/cast",
-			"minecraft:sandstone", 
+			"minecraft:air", 
 			Selector('@e', 
 				{ 
 					type: "minecraft:husk", 
