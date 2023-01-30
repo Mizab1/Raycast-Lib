@@ -2,16 +2,14 @@
   "C:\\Users\\Mizab\\AppData\\Roaming\\.minecraft\\_Sandstone Projects\\Raycast Lib\\src": {
     "files": {
       "pack.mcmeta": "a15bd01a62d8b2711b9aad86199caf62",
-      "data\\raycast_lib\\functions\\raycast2\\update.mcfunction": "69e754d091e51c9043ca833f314632bb",
-      "data\\raycast_lib\\functions\\raycast2\\hit.mcfunction": "26182bb951f5ef64eb5f2ddf256d9073",
+      "data\\minecraft\\tags\\functions\\tick.json": "e0928d87eb40f1ef3baf44432b61512a",
+      "data\\minecraft\\tags\\functions\\load.json": "2ccd7acae3b7d43c17bedc40544bc5da",
       "data\\raycast_lib\\functions\\test.mcfunction": "d6a5f1ff2d45011d7f17663346405a1a",
       "data\\raycast_lib\\functions\\test\\execute_as.mcfunction": "28730a2fc3462bc5254c139fbc92105d",
       "data\\raycast_lib\\functions\\raycast\\update.mcfunction": "4b0575d4400996b8a722f4e8fe0d43bb",
       "data\\raycast_lib\\functions\\raycast\\hit.mcfunction": "8baec8a95817e0b3f1d25d8f542b490b",
       "data\\raycast_lib\\functions\\raycast\\cast.mcfunction": "d5fda67819639a239eb5362cbc6b00de",
-      "data\\raycast_lib\\functions\\__init__.mcfunction": "f8b91616d33f5014f297b6789fa6981c",
-      "data\\minecraft\\tags\\functions\\tick.json": "e0928d87eb40f1ef3baf44432b61512a",
-      "data\\minecraft\\tags\\functions\\load.json": "2ccd7acae3b7d43c17bedc40544bc5da"
+      "data\\raycast_lib\\functions\\__init__.mcfunction": "f8b91616d33f5014f297b6789fa6981c"
     },
     "resultFolder": "C:\\Users\\Mizab\\AppData\\Roaming\\.minecraft\\saves\\Testing 3\\datapacks\\Raycast Lib"
   }
