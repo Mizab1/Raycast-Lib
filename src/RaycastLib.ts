@@ -20,12 +20,16 @@ const currentIter = raycastPvtObj('@s');
 export function raycast(nameOfFile: string, blockToIgnore: BLOCKS | null, entityToHit: SelectorClass | null, runOnEveryStep: MCFunctionInstance, runOnHit: MCFunctionInstance, step: number = 1,  maxIter: null | number = 20): void {
     // Reuseable function to check if the target is hit
     function ifHitBlock(): void {
-        execute.unless(_.block(rel(0, 0, 0), blockToIgnore)).run(runOnHit);
-        currentIter.set(0);
+        execute.unless(_.block(rel(0, 0, 0), blockToIgnore)).run(() => {
+            runOnHit();
+            currentIter.set(0);
+        });
     }
     function ifHitEntity(): void {
-        execute.if.entity(entityToHit).run(runOnHit);
-        currentIter.set(0);
+        execute.if.entity(entityToHit).run(() => {
+            runOnHit();
+            currentIter.set(0);
+        });
     }
 
     // Recursive function to cast a ray
