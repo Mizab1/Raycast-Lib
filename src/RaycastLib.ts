@@ -17,7 +17,7 @@ const currentIter = raycastPvtObj('@s');
  * You can use NOT operator (!) to invert the condition of 'entityToHit'.
  * Note: You can pass `null` where you don't want to pass the args such as `entityToHit`, `blockToHit`.
  */
-export function raycast(nameOfFile: string, blockToIgnore: BLOCKS | null, entityToHit: SelectorClass | null, runOnEveryStep: MCFunctionInstance, runOnHit: MCFunctionInstance, step: number = 1,  maxIter: null | number = 20): void {
+export function raycast(nameOfFile: string, blockToIgnore: BLOCKS | null, entityToHit: SelectorClass | null, runOnEveryStep: MCFunctionInstance, runOnHit: MCFunctionInstance, step: number = 1,  maxIter: number = 20): void {
     // Reuseable function to check if the target is hit
     function ifHitBlock(): void {
         execute.unless(_.block(rel(0, 0, 0), blockToIgnore)).run(() => {
