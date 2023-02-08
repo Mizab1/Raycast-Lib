@@ -23,9 +23,9 @@ raycast(fileName, blockToIgnore, entityToHit, runOnEveryStep, runOnHit, step, ma
 ```
 `nameOfFile` Name of the file that will be generated.
 
-`blockToIgnore` Block name ignore, if the current block is not the specified block then the raycast will stop.
+`blockToIgnore` Block name ignore, if the current block is not the specified block then the raycast will stop, can be null.
 
-`entityToHit` Name of the Entity to look for, it accept Selectors with distance attribute.
+`entityToHit` Name of the Entity to look for, it accept Selectors with distance attribute, can be null.
 
 `runOnEveryStep` MCFunction to run on every step.
 
@@ -33,7 +33,7 @@ raycast(fileName, blockToIgnore, entityToHit, runOnEveryStep, runOnHit, step, ma
 
 `step` Step size of the raycast, default is 1 (OPTIONAL).
 
-`maxIter` Maximum iteration of the raycast, default is 20.
+`maxIter` Maximum iteration of the raycast, default is 20 (OPTIONAL).
 
 **Example of the function:**
 ```ts
