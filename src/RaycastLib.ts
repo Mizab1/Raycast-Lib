@@ -1,4 +1,4 @@
-import { BLOCKS, execute, functionCmd, loc, MCFunction, MCFunctionInstance, Objective, rel, say, SelectorClass, tellraw, _ } from "sandstone";
+import { BLOCKS, execute, functionCmd, loc, MCFunction, MCFunctionInstance, Objective, rel, SelectorClass, tellraw, _ } from "sandstone";
 
 // Private Variables 
 const raycastPvtObj = Objective.create('raycastPvt.obj', 'dummy');
