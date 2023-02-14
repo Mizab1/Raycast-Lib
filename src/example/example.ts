@@ -23,7 +23,7 @@ MCFunction('test', () => {
 			MCFunction("raycast/hit", () => {
 				effect.give(Selector('@e', { type: 'minecraft:husk', dx: 0}), "minecraft:instant_health");
 				say("Hi")
-			}), 1, 40
+			}), 1, 30
 		)
 	})
 }, {
