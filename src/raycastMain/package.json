@@ -1,6 +1,6 @@
 {
   "name": "sandstone-raycast",
-  "version": "1.0.3",
+  "version": "1.0.2",
   "description": "Provides a function to creates a simple raycast for minecraft.",
   "main": "RaycastLib.ts",
   "scripts": {
