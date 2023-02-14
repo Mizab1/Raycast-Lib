@@ -1,6 +1,6 @@
 {
   "name": "raycast-lib",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A data pack created with Sandstone",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -27,4 +27,3 @@
     "node": ">=12.9.0"
   }
 }
-
