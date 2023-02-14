@@ -1,0 +1,16 @@
+{
+  "name": "sandstone-raycast",
+  "version": "1.0.1",
+  "description": "Provides a function to creates a simple raycast for minecraft.",
+  "main": "RaycastLib.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "minecraft",
+    "sandstone",
+    "raycast"
+  ],
+  "author": "Mizab",
+  "license": "MIT"
+}
