@@ -16,7 +16,6 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - run: npm ci
       - run: cd src/sandstone-raycast
       - run: npm publish
         env:
