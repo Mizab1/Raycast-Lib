@@ -43,7 +43,7 @@ export function raycast(nameOfFile: string, blockToIgnore: BLOCKS | null, entity
                 runOnEveryStep();
                 if(entityToHit == null && blockToIgnore == null){
                     tellraw('@s', {
-                        "text": "[Raycast Wizard] Both Entity and Block is null, what am I suppose to look for?",
+                        "text": "[Raycast Wizard] Both Entity and Block are null, what am I suppose to look for?",
                         "color": "white"
                     });
                     currentIter.set(0);
