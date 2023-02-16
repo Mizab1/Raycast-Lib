@@ -9,6 +9,10 @@
     "sandstone",
     "raycast"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mizab1/Raycast-Lib.git"
+  },
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build"
