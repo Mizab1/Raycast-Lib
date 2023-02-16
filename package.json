@@ -2,7 +2,7 @@
   "name": "sandstone-raycast",
   "version": "1.0.4",
   "description": "A data pack created with Sandstone",
-  "main": "build/index.js",
+  "main": "src/RaycastLib.ts",
   "types": "build/index.d.ts",
   "scripts": {
     "watch": "sand watch",
