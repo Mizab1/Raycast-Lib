@@ -1,6 +1,6 @@
 {
   "name": "sandstone-raycast",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A data pack created with Sandstone",
   "main": "build/index.js",
   "types": "build/index.d.ts",
