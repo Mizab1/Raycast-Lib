@@ -67,4 +67,5 @@ export function raycast(nameOfFile: string, blockToIgnore: BLOCKS | null, entity
     functionCmd(recurcive);
 }
 
-module.exports = raycast
+exports.raycast = raycast;
+module.exports = raycast;
