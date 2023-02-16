@@ -2,12 +2,7 @@
   "name": "sandstone-raycast",
   "version": "1.0.5",
   "description": "A Sandstone library to create raycast",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
-  "scripts": {
-    "watch": "sand watch",
-    "build": "sand build"
-  },
+  "main": "src/RaycastLib.ts",
   "keywords": [
     "minecraft",
     "sandstone",
