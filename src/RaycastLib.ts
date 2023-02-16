@@ -18,7 +18,7 @@ const currentIter = raycastPvtObj('@s');
  * Note: You can pass `null` where you don't want to pass the args such as `entityToHit`, `blockToHit`.
  */
 export function raycast(nameOfFile: string, blockToIgnore: BLOCKS, entityToHit: SelectorClass, runOnEveryStep: MCFunctionInstance, runOnHit: MCFunctionInstance, step: number = 1,  maxIter: number = 20): void {
-    // Reuseable function to check if the target is hit
+    // Reuseable function to check if the target is hit or not
     function ifHitBlock(): void {
         execute.unless(_.block(rel(0, 0, 0), blockToIgnore)).run(() => {
             runOnHit();
