@@ -1,6 +1,6 @@
 
 import { effect, execute, loc, MCFunction, Objective, particle, rel, say, Selector } from 'sandstone'
-import { raycast } from '../RaycastLib'
+import { raycast } from '../src/RaycastLib'
 
 export const rightClickObj = Objective.create("cast.rc.obj", "minecraft.used:minecraft.carrot_on_a_stick")
 export const rightClick = rightClickObj("@s")

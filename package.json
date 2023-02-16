@@ -2,12 +2,16 @@
   "name": "sandstone-raycast",
   "version": "1.0.6",
   "description": "A Sandstone library to create raycast",
-  "main": "src/RaycastLib.ts",
+  "main": "build/raycastLib.js",
+  "types": "build/raycastLib.d.ts",
   "keywords": [
     "minecraft",
     "sandstone",
     "raycast"
   ],
+  "scripts": {
+    "build": "tsc"
+  },
   "author": "Mizab",
   "license": "MIT",
   "dependencies": {
