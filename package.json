@@ -1,8 +1,8 @@
 {
   "name": "sandstone-raycast",
-  "version": "1.0.5",
-  "description": "A data pack created with Sandstone",
-  "main": "src/RaycastLib.ts",
+  "version": "1.0.4",
+  "description": "A Sandstone library to create raycast",
+  "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
     "watch": "sand watch",
