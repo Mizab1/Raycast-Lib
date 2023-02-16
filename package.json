@@ -10,7 +10,8 @@
     "raycast"
   ],
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "prepare": "npm run build"
   },
   "author": "Mizab",
   "license": "MIT",
@@ -24,5 +25,8 @@
   },
   "engines": {
     "node": ">=12.9.0"
-  }
+  },
+  "files": [
+    "build/**/*"
+  ]
 }
