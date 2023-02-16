@@ -6,13 +6,13 @@ This library provides a simple raycast function to quickly construct a raycast f
 
 
 To import the raycast function:
-1. Download the Library (RaycastLib.ts) :arrow_down:
-2. Paste it in your project folder :clipboard:
-3. Import the `Raycast.ts` file in your project :arrow_heading_down:
+1. Download the NPM Library. :arrow_down:
+   - You can do it by running `npm i sandstone-raycast` in your console.
+2. Import the `raycast` in your project. :arrow_heading_down:
 ```ts
-import { raycast } from './RaycastLib'
+    import { raycast } from "sandstone-raycast";
 ```
-4. Call the raycast function 
+4. Call the raycast function to generate MCFunctons.
 5. Enjoy :star:
 ---
 **Syntax:**
@@ -35,7 +35,7 @@ raycast(fileName, blockToIgnore, entityToHit, runOnEveryStep, runOnHit, step, ma
 
 `maxIter` Maximum iteration of the raycast, default is 20 (OPTIONAL).
 
-**Example of the function:**
+**Example of raycast function:**
 ```ts
 raycast(
     "raycast/cast",
@@ -59,13 +59,13 @@ raycast(
 **Example Pack:**
 ```ts
 import { effect, execute, loc, MCFunction, Objective, particle, rel, say, Selector } from 'sandstone'
-import { raycast } from './RaycastLib'
+import { raycast } from "sandstone-raycast";
 
-export const rightClickObj = Objective.create("cast.rc.obj", "minecraft.used:minecraft.carrot_on_a_stick")
+export const rightClickObj = Objective.create("rcObj", "minecraft.used:minecraft.carrot_on_a_stick")
 export const rightClick = rightClickObj("@s")
 
 MCFunction('test', () => {
-    execute.as(Selector('@a', { scores: { 'cast.rc.obj': [1, null] } })).at('@s').anchored("eyes").positioned(loc(0, 0, 1)).run(() => {
+    execute.as(Selector('@a', { scores: { 'rcObj': [1, null] } })).at('@s').anchored("eyes").positioned(loc(0, 0, 1)).run(() => {
         rightClick.set(0);
         raycast(
             "raycast/cast",
