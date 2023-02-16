@@ -32,7 +32,7 @@ export function raycast(nameOfFile: string, blockToIgnore: BLOCKS, entityToHit: 
         });
     }
 
-    // Recursive function to cast a ray
+    // Recursive function to cast a ray forward
     const recurcive: any = MCFunction(nameOfFile, () => {
         currentIter.add(1);
         _
