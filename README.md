@@ -97,7 +97,7 @@ MCFunction(
   "test",
   () => {
     execute
-      .as(Selector("@a", { scores: { rcObj: [1, null] } }))
+      .as(Selector("@a", { scores: { [rightClick.objective.name]: [1, null] } }))
       .at("@s")
       .anchored("eyes")
       .positioned(loc(0, 0, 1))
