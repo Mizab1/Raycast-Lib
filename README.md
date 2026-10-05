@@ -15,13 +15,13 @@ To use the raycast function:
 1. Install the NPM package: :arrow_down:
 
    ```bash
-   bun i @mizab/raycast
+   bun i sandstone-raycast
    ```
 
 2. Import `raycast` into your project: :arrow_heading_down:
 
    ```ts
-   import { raycast, passable } from "@mizab/raycast";
+   import { raycast, passable } from "sandstone-raycast";
    ```
 
 3. Call the `raycast` function to generate the required MCFunctions.
@@ -88,7 +88,7 @@ Import passable from the Raycast package and use `passable.name` as the `blockTo
 ## Example Pack
 
 ```ts
-import { passable, raycast } from "@mizab/raycast";
+import { passable, raycast } from "sandstone-raycast";
 import { effect, execute, loc, MCFunction, Objective, particle, rel, Selector } from "sandstone";
 
 const rightClick = Objective.create("rcObj", "minecraft.used:minecraft.carrot_on_a_stick")("@s");
