@@ -2,7 +2,8 @@ name: Publish to npm
 
 on:
   push:
-    branches: ["main", "master"]
+    tags:
+      - "v*"
   workflow_dispatch:
 
 permissions:
@@ -38,17 +39,17 @@ jobs:
       - name: Install dependencies
         run: bun install
 
-      - name: Configure Git Bot
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+      # - name: Configure Git Bot
+      #   run: |
+      #     git config --global user.name 'github-actions[bot]'
+      #     git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
-      - name: Auto-Bump Version
-        run: |
-          npm version patch -m "chore: auto-bump version to %s"
+      # - name: Auto-Bump Version
+      #   run: |
+      #     npm version patch -m "chore: auto-bump version to %s"
 
-      - name: Push new version to GitHub
-        run: git push --follow-tags
+      # - name: Push new version to GitHub
+      #   run: git push --follow-tags
 
       - name: Build
         run: bun dev:build
