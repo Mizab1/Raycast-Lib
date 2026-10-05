@@ -6,6 +6,10 @@
   "module": "./lib/index.js",
   "exports": "./lib/index.js",
   "types": "./lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mizab1/Raycast-Lib.git"
+  },
   "workspaces": [
     "./",
     "test"
@@ -18,8 +22,12 @@
     "dev:watch": "sand watch --library",
     "prepublishOnly": "bun dev:build"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "minecraft",
+    "sandstone",
+    "raycast"
+  ],
+  "author": "Mizab",
   "license": "MIT",
   "devDependencies": {
     "sandstone-cli": "^2.6.9",
