@@ -1,0 +1,20 @@
+{
+  "name": "sandstone-raycast-test",
+  "type": "module",
+  "module": "src/index.ts",
+  "scripts": {
+    "dev:build": "sand build",
+    "dev:test-build": "sand build --dry --verbose"
+  },
+  "dependencies": {
+    "sandstone": "~1.2.36",
+    "sandstone-cli": "^2.6.9",
+    "sandstone-raycast": "link:sandstone-raycast"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.8"
+  },
+  "trustedDependencies": [
+    "@parcel/watcher"
+  ]
+}

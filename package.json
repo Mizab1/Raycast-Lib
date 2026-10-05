@@ -1,36 +1,35 @@
 {
   "name": "sandstone-raycast",
-  "version": "1.0.12",
-  "description": "A Sandstone library to create raycast",
-  "main": "build/raycastLib.js",
-  "types": "build/raycastLib.d.ts",
-  "keywords": [
-    "minecraft",
-    "sandstone",
-    "raycast"
+  "version": "1.0.0",
+  "description": "A library created with Sandstone",
+  "type": "module",
+  "module": "./lib/index.js",
+  "exports": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "workspaces": [
+    "./",
+    "test"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Mizab1/Raycast-Lib.git"
-  },
   "scripts": {
-    "build": "tsc",
-    "prepare": "npm run build"
+    "setup": "bun link && bun i",
+    "dev:test-build": "cd test && bun dev:test-build",
+    "dev:compile": "bun build --outfile=lib/index.js --packages=external src/index.ts",
+    "dev:build": "bun dev:compile && bun tsc",
+    "dev:watch": "sand watch --library",
+    "prepublishOnly": "bun dev:build"
   },
-  "author": "Mizab",
+  "keywords": [],
+  "author": "",
   "license": "MIT",
-  "dependencies": {
-    "sandstone": "^0.13.6"
-  },
   "devDependencies": {
-    "@types/node": "^18.11.18",
-    "sandstone-cli": "^0.5.4",
-    "typescript": "^4.9.4"
+    "sandstone-cli": "^2.6.9",
+    "typescript": "^7.0.2"
   },
-  "engines": {
-    "node": ">=12.9.0"
+  "dependencies": {
+    "@types/bun": "^1.3.8",
+    "sandstone": "~1.2.36"
   },
-  "files": [
-    "build/**/*"
+  "trustedDependencies": [
+    "@parcel/watcher"
   ]
 }

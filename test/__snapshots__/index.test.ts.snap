@@ -1,0 +1,84 @@
+// Bun Snapshot v1, https://bun.sh/docs/test/snapshots
+
+exports[`datapack/data/load/tags/function/pre_load.json 1`] = `
+{
+  "replace": false,
+  "values": [],
+}
+`;
+
+exports[`datapack/data/load/tags/function/load.json 1`] = `
+{
+  "replace": false,
+  "values": [
+    "default:__init__",
+    "template:display_message",
+  ],
+}
+`;
+
+exports[`datapack/data/load/tags/function/post_load.json 1`] = `
+{
+  "replace": false,
+  "values": [],
+}
+`;
+
+exports[`datapack/data/load/function/_private/init.mcfunction 1`] = `"# Reset scoreboards so packs can set values accurate for current load."`;
+
+exports[`datapack/data/load/function/_private/init.mcfunction 2`] = `"scoreboard objectives add load.status dummy"`;
+
+exports[`datapack/data/load/function/_private/init.mcfunction 3`] = `"scoreboard players reset * load.status"`;
+
+exports[`datapack/data/load/function/_private/init.mcfunction: Length 1`] = `3`;
+
+exports[`datapack/data/load/tags/function/_private/init.json 1`] = `
+{
+  "replace": false,
+  "values": [
+    "load:_private/init",
+  ],
+}
+`;
+
+exports[`datapack/data/load/tags/function/_private/load.json 1`] = `
+{
+  "replace": false,
+  "values": [
+    "#load:_private/init",
+    {
+      "id": "#load:pre_load",
+      "required": false,
+    },
+    {
+      "id": "#load:load",
+      "required": false,
+    },
+    {
+      "id": "#load:post_load",
+      "required": false,
+    },
+  ],
+}
+`;
+
+exports[`datapack/data/minecraft/tags/function/load.json 1`] = `
+{
+  "replace": false,
+  "values": [
+    "#load:_private/load",
+  ],
+}
+`;
+
+exports[`datapack/data/sandstone-raycast_test/function/__init__.mcfunction 1`] = `"scoreboard objectives add __sandstone dummy [{"text":"Sandstone","color":"gold"}," internals"]"`;
+
+exports[`datapack/data/default/function/__init__.mcfunction 2`] = `"scoreboard players set default load.status 1"`;
+
+exports[`datapack/data/default/function/__init__.mcfunction: Length 1`] = `2`;
+
+exports[`datapack/data/template/function/display_message.mcfunction 1`] = `"tellraw @a ["\\n========= Congratulations! =========\\n\\n",{"text":" Sandstone template library","color":"gold","bold":true}," is ",{"text":"successfully installed.\\n\\n","color":"green"},"==============",{"text":"🏹","color":"#D2691E"},{"text":"⚔","color":"#45ACA5"},{"text":"⛏","color":"#FFD700"},"=============="]"`;
+
+exports[`datapack/data/template/function/display_message.mcfunction: Length 1`] = `1`;
+
+exports[`file_count: File Count 1`] = `9`;

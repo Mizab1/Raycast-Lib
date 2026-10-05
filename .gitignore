@@ -1,3 +1,9 @@
-/node_modules
-/.sandstone
-/build
+node_modules
+.env
+.sandstone
+test/resources/
+lib
+test/bun.lock
+.temp/
+# Symlink to ../sandstone/patches/ for bun link workaround
+/patches
