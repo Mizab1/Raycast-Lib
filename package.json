@@ -1,6 +1,6 @@
 {
   "name": "sandstone-raycast",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A library created with Sandstone",
   "type": "module",
   "module": "./lib/index.js",

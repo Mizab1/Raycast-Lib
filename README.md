@@ -4,7 +4,7 @@
 
 _This library is built for [Sandstone](https://github.com/sandstone-mc/sandstone)._ :computer:
 
-> **Note:** This library is works with >=Release 1.0 of sandstone. For earlier versions refer [Here](https://github.com/Mizab1/Raycast-Lib).
+> **Note:** This library is works with >=Release 1.0 of sandstone. For earlier versions refer [Here](https://github.com/Mizab1/Raycast-Lib/tree/c8ee7bf208b03ccfe711cb2ce0e2d51c81cd1a4f).
 
 This library provides a simple raycast function for quickly creating raycasts that can detect blocks and/or entities.
 
